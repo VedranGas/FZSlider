@@ -1,0 +1,138 @@
+.wrapper {
+
+  width: 940px;
+  margin: auto;
+
+}
+
+body {
+
+  font-family: "Open Sans", sans-serif;
+
+}
+
+html, body {
+   margin: 0; padding: 0;
+}
+
+.buttons {
+
+  width: 50px;
+  float: left;
+  margin-top: 215px;
+
+  }
+
+  .move-left {
+
+    background: url('Assets/arrow-blue-left.png') no-repeat;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    color: #dddddd;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 25px 25px;
+    background-position: center;
+
+  }
+
+  .move-right {
+
+    background: url('Assets/arrow-blue-right.png') no-repeat;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    color: #dddddd;
+    text-align: center;
+    padding: 25px 25px;
+    background-position: center;
+  }
+
+  .move-right:hover, .move-left:hover {
+    border-color: #15477a;
+    color: #15477a;
+}
+
+
+
+.centered {
+  margin: 0 auto;
+}
+
+#lorem {
+
+  width: 289px;
+  margin-left: 20px;
+  color: #15477a;
+  float: left;
+  margin-top: -15px;
+  line-height: 1.4
+}
+
+
+
+h1 {
+
+  font-size: 1.84em;
+
+}
+
+.obj1Up, .obj2Up, .obj3Down {
+
+  float: left;
+  width: 300px;
+  height: 100px;
+  background-color: #dddddd;
+  border-radius: 0 0 5px 5px;
+  margin: 0 0 60px 0;
+}
+
+.obj2Up {
+
+  width: 620px;
+  margin-left: 20px;
+}
+
+.obj3Down {
+  width: 940px;
+  border-radius: 5px 5px 0 0;
+  margin:190px 0 0 0;
+  float: right;
+
+}
+
+p {
+
+  color: #606060;
+
+}
+
+.setImg {
+
+height: 200px;
+border-radius: 5px;
+
+}
+
+
+#carousel-inner {
+    width: 1060px;
+    float: left;
+    position: relative;
+    margin-left: -470px;
+}
+
+#carousel-ul {
+    position:relative;
+    list-style-type: none;
+    margin: 0px 20px 0px 0px;
+    padding: 0px;
+ 
+}
+
+
+#carousel-ul li {
+ float: left;
+  text-align: center;
+  margin: 5px;
+  font-size: 1.5rem;
+}

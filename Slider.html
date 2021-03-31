@@ -1,0 +1,146 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Slider</title>
+
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+    <link href="StyleSheet.css" rel="stylesheet">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+    </head>
+
+<body>
+
+<div class="wrapper">
+
+  <div class="obj1Up"></div>
+
+  <div class="obj2Up"></div>
+
+
+    <div id="carousel-inner">
+        <ul id="carousel-ul">
+            <li><img class="setImg" src="Assets/slider-image-5.jpg" alt=" "></li>
+            <li><img class="setImg" src="Assets/slider-image-8.jpg" alt=" "></li>
+            <li><img class="setImg" src="Assets/slider-image-9.jpg" alt=" "></li>
+            <li><img class="setImg" src="Assets/slider-image-6.jpg" alt=" "></li>
+            <li><img class="setImg" src="Assets/slider-image-7.jpg" alt=" "></li>
+            <li><img class="setImg" src="Assets/slider-image-4.jpg" alt=" "></li>
+            <li><img class="setImg" src="Assets/slider-image-3.jpg" alt=" "></li>
+            <li><img class="setImg" src="Assets/slider-image-2.jpg" alt=" "></li>
+            <li><img class="setImg" src="Assets/slider-image-1.jpg" alt=" "></li>           
+        </ul>
+      </div>
+</div>
+
+<div class="buttons">
+      <button class="move-left"></button>
+      <button class="move-right"></button>
+      
+  </div>
+
+<div id="lorem">
+  	
+  	<h1>Lorem ipsum dolor sit amet consectetur adipiscing elit</h1>
+  	<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+ 	lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+ 	dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+
+
+<div class="obj3Down"></div>
+</div>
+
+  
+
+
+
+    <script type="text/javascript">
+
+    
+    var Carousel = new
+    function() {
+
+    var wrapper = document.getElementById('carousel-inner'),
+        timer = null;
+
+    var start = function() {
+        doCarousel();
+    };
+
+    var start2 = function() {
+        doCarousel2();
+    }
+
+    var sliding = function() {
+        var item_width = $('#carousel-ul li').outerWidth() + 10;
+        var left_indent = parseInt($('#carousel-ul').css('left')) - item_width;
+        $('#carousel-ul:not(:animated)').animate({
+            'left': left_indent
+        }, 800, 'linear', function() {
+
+           $('#carousel-ul li:last').after($('#carousel-ul li:first'));
+            $('#carousel-ul').css({
+                'left': '-160px'
+            });
+        });
+    };
+
+
+    var sliding2 = function() {
+        var item_width = $('#carousel-ul li').outerWidth() + 10;
+        var right_indent = parseInt($('#carousel-ul').css('right')) - item_width;
+        $('#carousel-ul:not(:animated)').animate({
+            'right': right_indent
+        }, 800, 'linear', function() {
+
+           $('#carousel-ul li:first').after($('#carousel-ul li:last'));
+            $('#carousel-ul').css({
+                'right': '160px'
+            });
+        });
+    };
+
+
+    var doCarousel = function() {
+        timer = setInterval(sliding, 800);
+    };
+
+    var doCarousel2 = function() {
+        timer = setInterval(sliding2, 800);
+    };
+
+
+
+    this.init = function() {
+        start();
+
+    }
+
+    this.init2 = function() {
+      start2();
+    }
+    };
+
+
+  $(".move-left").click(function(){
+   Carousel.init();
+   })
+  $(".move-right").click(function(){
+    Carousel.init2();
+  })
+
+
+</script>
+
+</body>
+</html>
